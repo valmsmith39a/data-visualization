@@ -1,5 +1,4 @@
 import React from 'react';
-import { getAllRecords } from '../../actions/RecordActions/index';
 import { connect } from 'react-redux';
 
 class InputRecord extends React.Component {
@@ -21,4 +20,4 @@ class InputRecord extends React.Component {
   }
 }
 
-export default connect(null, { getAllRecords })(InputRecord)
+export default connect(null, null)(InputRecord)
