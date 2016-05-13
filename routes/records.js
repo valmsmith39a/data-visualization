@@ -1,8 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
+var records = [1,2,3];
+
 router.get('/', function(req, res, next){
-  console.log('in get route');
+  res.send(records);
 });
 
 module.exports = router;

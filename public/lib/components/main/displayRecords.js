@@ -1,14 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getAllRecords } from '../../actions/RecordActions/index';
-
+import { getAllRecords } from '../../actions/recordActions';
+import Record from './record';
 
 class DisplayRecords extends React.Component {
   constructor(props) {
     super(props)
-    console.log('get all records', getAllRecords);
     this.props.getAllRecords()
-    .then(reponse => {
+    .then(response => {
       console.log('response: ', response);
     })
   }
@@ -31,6 +30,7 @@ class DisplayRecords extends React.Component {
 }
 
 function mapStateToProps(state) {
+  console.log('state: ', state);
   return state;
 }
 
