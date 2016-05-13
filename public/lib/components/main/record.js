@@ -6,6 +6,6 @@ export default ({ record, index }) => (
   <li>
     {record}
     <EditRecord />
-    <DeleteRecord />
+    <DeleteRecord index={index}/>
   </li>
 )
