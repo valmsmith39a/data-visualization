@@ -17,8 +17,9 @@ router.put('/:index', function(req, res, next) {
   res.send({recordObject:req.body, index:req.params.index});
 })
 
-router.delete('/', function(req, res, next) {
-  res.send('delete successful');
+router.delete('/:index', function(req, res, next) {
+  records.splice(req.params.index, 1);
+  res.send(req.params.index);
 });
 
 module.exports = router;

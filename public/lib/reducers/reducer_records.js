@@ -17,11 +17,13 @@ export default function(state = INITIAL_STATE, action) {
       // action.payload.data is the new record object
       return [...state, action.payload.data]
     case EDIT_RECORD:
-      // action.payload.data is an objet with the record object and index 
+      // action.payload.data is an objet with the record object and index
       const index = action.payload.data.index;
       return [...state.slice(0, index), action.payload.data.recordObject, ...state.slice(index+1)]
     case DELETE_RECORD:
-      return [...state.slice(0, index), ...state.slice(index+1)]
+      // action.payload.data is the index of the record object deleted
+      const indexDelete = action.payload.data;
+      return [...state.slice(0, indexDelete), ...state.slice(indexDelete+1)]
     default:
       return state;
   }

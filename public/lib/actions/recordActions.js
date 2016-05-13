@@ -38,7 +38,7 @@ export function editRecord(newRecord, index) {
 }
 
 export function deleteRecord(index) {
-  const request = axios.delete(DELETE_RECORD_URL, index)
+  const request = axios.delete(`${DELETE_RECORD_URL}/${index}`)
 
   return {
     type: DELETE_RECORD,
