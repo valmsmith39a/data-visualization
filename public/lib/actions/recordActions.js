@@ -28,8 +28,8 @@ export function createRecord(record) {
   }
 }
 
-export function editRecord(newRecord) {
-  const request = axios.put(EDIT_RECORD_URL, newRecord)
+export function editRecord(newRecord, index) {
+  const request = axios.put(`${EDIT_RECORD_URL}/${index}`, newRecord)
 
   return {
     type: EDIT_RECORD,
