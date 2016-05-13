@@ -30,7 +30,6 @@ class DisplayRecords extends React.Component {
 }
 
 function mapStateToProps(state) {
-  console.log('state: ', state);
   return state;
 }
 
