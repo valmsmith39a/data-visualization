@@ -14,7 +14,7 @@ class EditRecord extends React.Component {
 
   closeEditInput() {
     this.setState({show: false})
-    this.props.editRecord()
+    this.props.editRecord({editedRecord: this.refs.editRecordInput.value})
     .then(response => {
       console.log('response: ', response);
     })
@@ -23,7 +23,10 @@ class EditRecord extends React.Component {
   renderEditInput() {
     if(this.state.show) {
       return (
-        <input />
+        <div>
+          <input ref='editRecordInput' />
+          <button onClick={this.closeEditInput.bind(this)} >Save Edit</button>
+        </div>
       )
     } else {
       return (
@@ -31,7 +34,7 @@ class EditRecord extends React.Component {
       )
     }
   }
-  
+
   render() {
     return(
       <div>

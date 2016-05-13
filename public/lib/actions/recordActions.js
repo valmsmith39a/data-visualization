@@ -27,7 +27,7 @@ export function createRecord(record) {
 }
 
 export function editRecord(newRecord) {
-  const request = axios.put(EDIT_RECORD_URL, record)
+  const request = axios.put(EDIT_RECORD_URL, newRecord)
 
   return {
     type: EDIT_RECORD,

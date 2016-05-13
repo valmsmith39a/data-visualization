@@ -12,7 +12,8 @@ router.post('/', function(req, res, next){
 });
 
 router.put('/', function(req, res, next){
-  res.send('edit successful');
+  console.log('req.body: ', req.body)
+  res.send(req.body);
 })
 
 router.delete('/', function(req, res, next){
