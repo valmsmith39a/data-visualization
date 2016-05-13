@@ -6,8 +6,11 @@ import { getAllRecords } from '../../actions/RecordActions/index';
 class DisplayRecords extends React.Component {
   constructor(props) {
     super(props)
+    console.log('get all records', getAllRecords);
     this.props.getAllRecords()
-    
+    .then(reponse => {
+      console.log('response: ', response);
+    })
   }
 
   renderRecords() {
@@ -30,4 +33,5 @@ class DisplayRecords extends React.Component {
 function mapStateToProps(state) {
   return state;
 }
+
 export default connect(mapStateToProps, { getAllRecords })(DisplayRecords)
