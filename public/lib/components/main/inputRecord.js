@@ -21,4 +21,4 @@ class InputRecord extends React.Component {
   }
 }
 
-export default connect(null, createRecord)(InputRecord)
+export default connect(null, { createRecord })(InputRecord)
