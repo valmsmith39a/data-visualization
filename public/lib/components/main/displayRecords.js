@@ -12,8 +12,8 @@ class DisplayRecords extends React.Component {
   renderRecords() {
     return (
       <ul>
-        this.state.records.map(record => {
-          return <Record record={record} index={index} />
+        this.state.records.map((record, index) => {
+          return <Record key={index} record={record} />
         })
       </ul>
     )
