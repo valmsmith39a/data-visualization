@@ -12,7 +12,6 @@ router.post('/', function(req, res, next){
 });
 
 router.put('/', function(req, res, next){
-  console.log('req.body: ', req.body)
   res.send(req.body);
 })
 
