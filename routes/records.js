@@ -8,10 +8,11 @@ router.get('/', function(req, res, next){
 });
 
 router.post('/', function(req, res, next){
-  console.log('req.body: ', req.body);
   res.send(req.body);
-})
+});
 
-
+router.delete('/', function(req, res, next){
+  res.send('delete successful');
+});
 
 module.exports = router;
