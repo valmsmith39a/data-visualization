@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import EntriesReducer from './reducer_entries';
+import RecordsReducer from './reducer_records';
 
 const rootReducer = combineReducers({
-  entries: EntriesReducer
+  records: RecordsReducer
 });
 
 export default rootReducer;
