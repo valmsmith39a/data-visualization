@@ -26,15 +26,17 @@ class EditRecord extends React.Component {
         <input />
       )
     } else {
-      return (<div><div>)
+      return (
+        <div></div>
+      )
     }
   }
-
+  
   render() {
     return(
       <div>
         <button onClick={this.openEditInput.bind(this)}>Edit</button>
-        {renderEditInput()}
+        {this.renderEditInput()}
       </div>
     )
   }
