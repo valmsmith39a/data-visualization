@@ -6,7 +6,8 @@ import { getAllRecords } from '../../actions/RecordActions/index';
 class DisplayRecords extends React.Component {
   constructor(props) {
     super(props)
-    // this.props.getAllRecords()
+    this.props.getAllRecords()
+    
   }
 
   renderRecords() {

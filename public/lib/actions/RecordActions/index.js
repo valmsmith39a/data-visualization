@@ -5,7 +5,8 @@ export const GET_ALL_RECORDS = 'GET_ALL_RECORDS';
 const GET_ALL_RECORDS_URL = 'records/';
 
 export default function getAllRecords() {
-  const request = axios.get()
+  const request = axios.get(GET_ALL_RECORDS)
+  
   return {
     type: GET_ALL_RECORDS,
     payload: request
