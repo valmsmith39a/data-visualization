@@ -1,13 +1,14 @@
 import React from 'react';
-import { getAllRecords } from '../../action/RecordActions/index';
+import { getAllRecords } from '../../actions/RecordActions/index';
+import { connect } from 'react-redux';
 
 class InputRecord extends React.Component {
   handleClick() {
     console.log('in handleClick');
-    this.props.getAllRecords()
-    .then(response => {
-      console.log('response: ', response);
-    })
+    // this.props.getAllRecords()
+    // .then(response => {
+    //   console.log('response: ', response);
+    // })
   }
 
   render() {
