@@ -1,13 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { createRecord } from '../../actions/recordActions';
 
 class InputRecord extends React.Component {
   handleClick() {
     console.log('in handleClick');
-    // this.props.getAllRecords()
-    // .then(response => {
-    //   console.log('response: ', response);
-    // })
+    this.props.createRecord()
+    .then(response => {
+      console.log('response: ', response);
+    })
   }
 
   render() {
@@ -20,4 +21,4 @@ class InputRecord extends React.Component {
   }
 }
 
-export default connect(null, null)(InputRecord)
+export default connect(null, createRecord)(InputRecord)
