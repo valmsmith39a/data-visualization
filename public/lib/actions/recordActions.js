@@ -2,14 +2,13 @@ import axios from 'axios';
 
 export const GET_ALL_RECORDS = 'GET_ALL_RECORDS';
 export const CREATE_RECORD = 'CREATE_RECORD';
-export const EDIT_RECORD_URL = 'EDIT_RECORD';
+export const EDIT_RECORD = 'EDIT_RECORD';
 
 const GET_ALL_RECORDS_URL = '/records';
 const CREATE_RECORD_URL = '/records';
 const EDIT_RECORD_URL = '/records';
 
 export function getAllRecords() {
-  console.log('in get all records action');
   const request = axios.get(GET_ALL_RECORDS_URL)
 
   return {
