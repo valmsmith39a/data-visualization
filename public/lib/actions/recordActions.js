@@ -16,8 +16,8 @@ export function getAllRecords() {
   }
 }
 
-export function createRecord(record, index) {
-  const request = axios.post(`${CREATE_RECORD_URL}/${index}`, record)
+export function createRecord(record) {
+  const request = axios.post(`${CREATE_RECORD_URL}`, record)
 
   return {
     type: CREATE_RECORD,

@@ -5,7 +5,7 @@ import { createRecord } from '../../actions/recordActions';
 class InputRecord extends React.Component {
   handleClick() {
     console.log('in handleClick');
-    this.props.createRecord()
+    this.props.createRecord({record:this.refs.inputRecord.value})
     .then(response => {
       console.log('response: ', response);
     })

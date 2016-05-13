@@ -7,10 +7,9 @@ router.get('/', function(req, res, next){
   res.send(records);
 });
 
-router.post('/:index', function(req, res, next){
+router.post('/', function(req, res, next){
   console.log('req.body: ', req.body);
-  console.log('req.params: ', req.params.index);
-  res.send('post successful');
+  res.send(req.body);
 })
 
 
