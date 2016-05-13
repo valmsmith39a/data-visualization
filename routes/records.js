@@ -11,6 +11,10 @@ router.post('/', function(req, res, next){
   res.send(req.body);
 });
 
+router.put('/', function(req, res, next){
+  res.send('edit successful');
+})
+
 router.delete('/', function(req, res, next){
   res.send('delete successful');
 });
