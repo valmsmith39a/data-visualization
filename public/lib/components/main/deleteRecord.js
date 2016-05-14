@@ -5,9 +5,7 @@ import { deleteRecord } from '../../actions/recordActions';
 class DeleteRecord extends React.Component {
   handleClick(index) {
       this.props.deleteRecord(index)
-        .then(response => {
-          console.log('resonse', response);
-        });
+        .then(response => {});
   }
 
   render() {

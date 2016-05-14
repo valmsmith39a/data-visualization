@@ -5,7 +5,7 @@ import DisplayRecords from './main/DisplayRecords';
 export default class RootComponent extends React.Component {
   render() {
     return(
-      <div>Hello from Root Component
+      <div>
         <InputRecord />
         <DisplayRecords />
       </div>

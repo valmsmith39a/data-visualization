@@ -6,7 +6,6 @@ class EditRecord extends React.Component {
   constructor(props) {
     super(props)
     this.state = {show: false}
-    console.log('index: ', this.props);
   }
 
   openEditInput() {
@@ -16,9 +15,7 @@ class EditRecord extends React.Component {
   closeEditInput() {
     this.setState({show: false})
     this.props.editRecord({record: this.refs.editRecordInput.value}, this.props.index)
-    .then(response => {
-      console.log('response: ', response);
-    })
+    .then(response => {})
   }
 
   renderEditInput() {

@@ -7,11 +7,9 @@ class DisplayRecords extends React.Component {
   constructor(props) {
     super(props)
     this.props.getAllRecords()
-    .then(response => {
-      console.log('response: ', response);
-    })
+    .then(response => {})
   }
-    
+
   renderRecords() {
     return this.props.records.map((record, index) => (
       <Record key={index} record={record} index={index} />
