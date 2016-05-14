@@ -13,13 +13,13 @@ router.post('/', function(req, res, next) {
 });
 
 router.put('/:index', function(req, res, next) {
-  records.splice(req.params.index, 1, req.body);
-  res.send({recordObject:req.body, index:req.params.index});
-})
+  records.splice(parseInt(req.params.index), 1, req.body);
+  res.send({recordObject:req.body, index:parseInt(req.params.index)});
+});
 
 router.delete('/:index', function(req, res, next) {
-  records.splice(req.params.index, 1);
-  res.send(req.params.index);
+  records.splice(parseInt(req.params.index), 1);
+  res.status(200).send(req.params.index);
 });
 
 module.exports = router;

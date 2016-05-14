@@ -21,7 +21,6 @@ export default function(state = INITIAL_STATE, action) {
       const index = action.payload.data.index;
       return [...state.slice(0, index), action.payload.data.recordObject, ...state.slice(index+1)]
     case DELETE_RECORD:
-      // action.payload.data is the index of the record object deleted
       const indexDelete = action.payload.data;
       return [...state.slice(0, indexDelete), ...state.slice(indexDelete+1)]
     default:
