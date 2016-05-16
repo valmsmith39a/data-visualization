@@ -4,7 +4,7 @@ import { createRecord } from '../../actions/recordActions';
 
 class InputRecord extends React.Component {
   handleClick() {
-    this.props.createRecord({record:this.refs.inputRecord.value})
+    this.props.createRecord({record:this.refs.inputRecord.value, checkbox: false})
     .then(response => {})
   }
 

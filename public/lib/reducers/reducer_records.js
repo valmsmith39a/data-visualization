@@ -5,7 +5,8 @@ import {
   GET_ALL_RECORDS,
   CREATE_RECORD,
   EDIT_RECORD,
-  DELETE_RECORD
+  DELETE_RECORD,
+  TOGGLE_CHECK
 } from '../actions/recordActions';
 
 export default function(state = INITIAL_STATE, action) {
@@ -23,6 +24,11 @@ export default function(state = INITIAL_STATE, action) {
     case DELETE_RECORD:
       const indexDelete = action.payload.data;
       return [...state.slice(0, indexDelete), ...state.slice(indexDelete+1)]
+    case TOGGLE_CHECK:
+      const indexToggle = action.payload.index;
+      let recordObject = state.slice(indexToggle)[0];
+      recordObject.checkbox = !recordObject.checkbox;
+      return [...state.slice(0, indexToggle), recordObject, ...state.slice(indexToggle+1)]
     default:
       return state;
   }
