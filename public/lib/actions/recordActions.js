@@ -57,6 +57,7 @@ export function toggleCheck(index, toggleCheck) {
 }
 
 export function like(index) {
+  console.log('in like: ', index);
   return {
     type: LIKE,
     payload: index
