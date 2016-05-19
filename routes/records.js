@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var records = [];
+var records = [{record:'a', checkbox:false}];
 
 router.get('/', function(req, res, next) {
   res.send(records);
