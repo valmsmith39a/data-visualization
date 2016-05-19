@@ -5,6 +5,7 @@ export const CREATE_RECORD = 'CREATE_RECORD';
 export const EDIT_RECORD = 'EDIT_RECORD';
 export const DELETE_RECORD = 'DELETE_RECORD';
 export const TOGGLE_CHECK = 'TOGGLE_CHECK';
+export const LIKE = 'LIKE';
 
 const GET_ALL_RECORDS_URL = '/records';
 const CREATE_RECORD_URL = '/records';
@@ -52,5 +53,12 @@ export function toggleCheck(index, toggleCheck) {
   return {
     type: TOGGLE_CHECK,
     payload: {index: index, toggleCheck: toggleCheck}
+  }
+}
+
+export function like(index) {
+  return {
+    type: LIKE,
+    payload: index
   }
 }
