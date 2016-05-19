@@ -14,7 +14,7 @@ class Like extends React.Component {
 
   likeAction() {
     this.props.like(55)
-    // like in component state 
+    // like in component state
     // this.setState({
     //   likeCounter: this.state.likeCounter + 1
     // })
@@ -23,7 +23,7 @@ class Like extends React.Component {
   likeCounter() {
     return(
       <div>
-        {this.state.likeCounter}
+        {/*this.state.likeCounter*/}
       </div>
     )
   }
