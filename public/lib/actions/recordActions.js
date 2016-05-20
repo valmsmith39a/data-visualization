@@ -6,12 +6,15 @@ export const EDIT_RECORD = 'EDIT_RECORD';
 export const DELETE_RECORD = 'DELETE_RECORD';
 export const TOGGLE_CHECK = 'TOGGLE_CHECK';
 export const LIKE = 'LIKE';
+export const GET_LIKES = 'GET_LIKES';
 
 const GET_ALL_RECORDS_URL = '/records';
 const CREATE_RECORD_URL = '/records';
 const EDIT_RECORD_URL = '/records';
 const DELETE_RECORD_URL = '/records';
-const TOGGLE_CHECK_URL = '/records/togglecheck/'
+const TOGGLE_CHECK_URL = '/records/togglecheck/';
+
+const GET_LIKES_URL = '/likes';
 
 export function getAllRecords() {
   const request = axios.get(GET_ALL_RECORDS_URL)
@@ -61,5 +64,14 @@ export function like(index) {
   return {
     type: LIKE,
     payload: index
+  }
+}
+
+export function getLikes() {
+  const request = axios.get(GET_LIKES_URL)
+
+  return {
+    type: GET_LIKES,
+    payload: request
   }
 }

@@ -1,10 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { like } from '../../actions/recordActions';
+import {
+  like,
+  getLikes
+} from '../../actions/recordActions';
 
 class Like extends React.Component {
   constructor(props) {
     super(props)
+    this.props.getLikes()
+    .then(res => ())
     // like in component state
     // this.state = {
     //   likeCounter: 0
@@ -13,7 +18,7 @@ class Like extends React.Component {
   }
 
   likeAction() {
-    console.log('this.props.index: ', this.props.index);
+    console.log('this.props.index: ', this.props.index)
     this.props.like(this.props.index)
     // like in component state
     // this.setState({
@@ -39,4 +44,4 @@ class Like extends React.Component {
   }
 }
 
-export default connect(null, { like })(Like)
+export default connect(null, { like, getLikes })(Like)
