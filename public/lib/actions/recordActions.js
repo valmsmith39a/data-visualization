@@ -7,6 +7,7 @@ export const DELETE_RECORD = 'DELETE_RECORD';
 export const TOGGLE_CHECK = 'TOGGLE_CHECK';
 export const LIKE = 'LIKE';
 export const GET_LIKES = 'GET_LIKES';
+export const CREATE_LIKE = 'CREATE_LIKE';
 
 const GET_ALL_RECORDS_URL = '/records';
 const CREATE_RECORD_URL = '/records';
