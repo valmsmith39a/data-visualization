@@ -9,7 +9,7 @@ class Like extends React.Component {
   constructor(props) {
     super(props)
     this.props.getLikes()
-    .then(res => ())
+    .then(res => { console.log('likes: ', res)})
     // like in component state
     // this.state = {
     //   likeCounter: 0

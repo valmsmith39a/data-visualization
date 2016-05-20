@@ -8,9 +8,8 @@ const INITIAL_STATE = []
 
 export default function (state=INITIAL_STATE, action) {
   switch(action.type) {
-    // case CREATE_RECORD:
-    //   console.log('likes arr: ', state);
-    //   return [...state, action.payload]
+    case CREATE_RECORD:
+      return action.payload.data
     // case LIKE:
     //   let index = action.payload
     //   console.log('like state: ', state)

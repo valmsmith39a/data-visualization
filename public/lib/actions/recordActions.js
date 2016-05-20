@@ -14,7 +14,7 @@ const EDIT_RECORD_URL = '/records';
 const DELETE_RECORD_URL = '/records';
 const TOGGLE_CHECK_URL = '/records/togglecheck/';
 
-const GET_LIKES_URL = '/likes';
+const GET_LIKES_URL = '/records/likes';
 
 export function getAllRecords() {
   const request = axios.get(GET_ALL_RECORDS_URL)
@@ -60,7 +60,6 @@ export function toggleCheck(index, toggleCheck) {
 }
 
 export function like(index) {
-  console.log('in like: ', index);
   return {
     type: LIKE,
     payload: index
