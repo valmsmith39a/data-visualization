@@ -37,12 +37,10 @@ class Like extends React.Component {
         </div>
       )
     } else {
-      console.log('in else of likes Counter')
       return (
         <div></div>
       )
     }
-
   }
 
   render() {
@@ -56,7 +54,6 @@ class Like extends React.Component {
 }
 
 function mapStateToProps(state) {
-  console.log('state: ', state);
   return state
 }
 
