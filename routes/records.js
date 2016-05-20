@@ -35,7 +35,7 @@ router.post('/likes', function(req, res, next) {
 })
 
 router.put('/likes/:index', function(req, res, next) {
-  let likesCount = likes[0].likes + 1;
+  let likesCount = likes[parseInt(req.params.index)].likes + 1;
   likes.splice(parseInt(req.params.index), 1, {likes:likesCount})
   res.send(likes);
 })

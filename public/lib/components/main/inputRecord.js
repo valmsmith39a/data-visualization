@@ -10,7 +10,7 @@ class InputRecord extends React.Component {
     this.props.createRecord({record:this.refs.inputRecord.value, checkbox: false})
     .then(response => {
       this.props.createLike({likes: 0})
-      .then(response = {})
+      .then(response => { console.log('response in create like: ', response)})
     })
   }
 

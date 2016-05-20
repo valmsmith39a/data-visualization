@@ -29,7 +29,7 @@ class Like extends React.Component {
   }
 
   likeCounter() {
-    if(this.props.likes.length !== 0) {
+    if(this.props.likes[this.props.index]) {
       let likesCounter = this.props.likes[this.props.index].likes
       return(
         <div>
