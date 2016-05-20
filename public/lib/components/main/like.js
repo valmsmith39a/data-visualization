@@ -37,6 +37,7 @@ class Like extends React.Component {
         </div>
       )
     } else {
+      console.log('in else of likes Counter')
       return (
         <div></div>
       )
