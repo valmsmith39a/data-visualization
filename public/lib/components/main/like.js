@@ -29,11 +29,19 @@ class Like extends React.Component {
   }
 
   likeCounter() {
-    return(
-      <div>
-        {/*this.state.likeCounter*/}
-      </div>
-    )
+    if(this.props.likes.length !== 0) {
+      let likesCounter = this.props.likes[this.props.index].likes
+      return(
+        <div>
+          {likesCounter}
+        </div>
+      )
+    } else {
+      return (
+        <div></div>
+      )
+    }
+
   }
 
   render() {
@@ -46,4 +54,9 @@ class Like extends React.Component {
   }
 }
 
-export default connect(null, { like, getLikes })(Like)
+function mapStateToProps(state) {
+  console.log('state: ', state);
+  return state
+}
+
+export default connect(mapStateToProps, { like, getLikes })(Like)
