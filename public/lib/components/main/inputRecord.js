@@ -1,11 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { createRecord } from '../../actions/recordActions';
+import {
+  createRecord,
+  createLike
+} from '../../actions/recordActions';
 
 class InputRecord extends React.Component {
   handleClick() {
     this.props.createRecord({record:this.refs.inputRecord.value, checkbox: false})
-    .then(response => {})
+    .then(response => {
+      this.props.createLike({likes: 0})
+      .then(response = {})
+    })
   }
 
   render() {
@@ -18,4 +24,4 @@ class InputRecord extends React.Component {
   }
 }
 
-export default connect(null, { createRecord })(InputRecord)
+export default connect(null, { createRecord, createLike })(InputRecord)

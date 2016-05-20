@@ -1,6 +1,7 @@
 
 import {
   CREATE_RECORD,
+  CREATE_LIKE,
   LIKE
 } from '../actions/recordActions'
 
@@ -8,8 +9,8 @@ const INITIAL_STATE = []
 
 export default function (state=INITIAL_STATE, action) {
   switch(action.type) {
-    case CREATE_RECORD:
-      return [...state, {likes:0}]
+    case CREATE_LIKE:
+      return [...state, action.payload.data]
     // case LIKE:
     //   let index = action.payload
     //   console.log('like state: ', state)

@@ -28,7 +28,6 @@ router.get('/likes', function(req, res, next) {
 });
 
 router.post('/likes', function(req, res, next) {
-  console.log('req.body likes: ', req.body)
   likes.push(req.body);
   res.send(req.body);
 })

@@ -75,3 +75,12 @@ export function getLikes() {
     payload: request
   }
 }
+
+export function createLike(like) {
+  const request = axios.post('records/likes', like)
+
+  return {
+    type: CREATE_LIKE,
+    payload: request
+  }
+}
