@@ -61,9 +61,11 @@ export function toggleCheck(index, toggleCheck) {
 }
 
 export function like(index) {
+  const request = axios.put(`records/likes/${index}`)
+
   return {
     type: LIKE,
-    payload: index
+    payload: request
   }
 }
 

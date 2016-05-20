@@ -1,8 +1,10 @@
+'use strict';
+
 var express = require('express');
 var router = express.Router();
 
 var records = [];
-var likes = [{index:0, likes:1}];
+var likes = [];
 
 router.get('/', function(req, res, next) {
   res.send(records);
@@ -33,7 +35,9 @@ router.post('/likes', function(req, res, next) {
 })
 
 router.put('/likes/:index', function(req, res, next) {
-  res.send('edit likes array');
+  let likesCount = likes[0].likes + 1;
+  likes.splice(parseInt(req.params.index), 1, {likes:likesCount})
+  res.send(likes);
 })
 
 module.exports = router;

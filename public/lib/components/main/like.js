@@ -18,9 +18,10 @@ class Like extends React.Component {
   }
 
   likeAction() {
-    console.log('this.props.index: ', this.props.index)
     this.props.like(this.props.index)
-    .then(response => {})
+    .then(response => {
+      console.log('response in like inc is: ', response)
+    })
     // like in component state
     // this.setState({
     //   likeCounter: this.state.likeCounter + 1
