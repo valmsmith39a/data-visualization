@@ -6,3 +6,18 @@ body {
 a {
   color: #00B7FF;
 }
+
+#input-record-wrapper {
+  background-color: red;
+  color: red;
+  text-align: center;
+}
+
+#input-record {
+  background-color: green;
+  color: red;
+}
+
+.input-record {
+  color: red; 
+}

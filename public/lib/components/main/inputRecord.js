@@ -16,8 +16,8 @@ class InputRecord extends React.Component {
 
   render() {
     return(
-      <div>
-        <input ref='inputRecord' />
+      <div id='input-record-wrapper'>
+        <input className='input-record' id='input-record' ref='inputRecord' />
         <button onClick={this.handleClick.bind(this)}>Create</button>
       </div>
     )
