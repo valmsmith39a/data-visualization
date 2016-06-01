@@ -9,9 +9,20 @@ a {
 
 #input-record-wrapper {
   text-align: center;
-font-family: 'Quicksand', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 #input-record {
   width: 10vw;
 }
+
+/*.record {
+  background-color: green;
+}*/
+
+/*.card-group {
+  background-color: red;
+  width: 10vw;
+  display: table;
+  table-layout: fixed;
+}*/

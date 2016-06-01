@@ -13,9 +13,11 @@ class DisplayRecords extends React.Component {
 
   renderRecords() {
     return this.props.records.map((record, index) => (
-      <div>
-        <Record key={index} record={record} index={index} />
-        <Like index={index} />
+      <div className='col-xs-3'>
+        <div className='card'>
+          <Record key={index} record={record} index={index} />
+          <Like index={index} />
+        </div>
       </div>
     ))
   }
@@ -23,9 +25,7 @@ class DisplayRecords extends React.Component {
   render() {
     return(
       <div>
-        <ul>
-          {this.renderRecords()}
-        </ul>
+        {this.renderRecords()}
       </div>
     )
   }
