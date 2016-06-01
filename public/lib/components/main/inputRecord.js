@@ -17,8 +17,9 @@ class InputRecord extends React.Component {
   render() {
     return(
       <div id='input-record-wrapper'>
+        <h3>Daily Distance</h3>
         <input className='input-record' id='input-record' ref='inputRecord' />
-        <button onClick={this.handleClick.bind(this)}>Create</button>
+        <button classname='btn btn-default' onClick={this.handleClick.bind(this)}>Post</button>
       </div>
     )
   }

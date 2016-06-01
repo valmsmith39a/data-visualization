@@ -8,16 +8,10 @@ a {
 }
 
 #input-record-wrapper {
-  background-color: red;
-  color: red;
   text-align: center;
+font-family: 'Quicksand', sans-serif;
 }
 
 #input-record {
-  background-color: green;
-  color: red;
-}
-
-.input-record {
-  color: red; 
+  width: 10vw;
 }

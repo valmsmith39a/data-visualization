@@ -22,7 +22,7 @@ class DisplayRecords extends React.Component {
 
   render() {
     return(
-      <div>DisplayRecords
+      <div>
         <ul>
           {this.renderRecords()}
         </ul>
